@@ -1,1 +1,5 @@
-<%= render "new" %>
+<%= form_for Report.new do |f| %>
+  <%= f.number_field :evaluation_id %>
+  <%= f.text_field :body %>
+  <%= f.submit "send" %>
+<% end %>

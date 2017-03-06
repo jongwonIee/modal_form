@@ -3,3 +3,9 @@
 <%= link_to 'New Report', reports_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
 
 <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+
+<% @reports.each do |r| %>
+    <%= r.evaluation_id %>
+    <%= r.body %>
+    <br>
+<% end %>
